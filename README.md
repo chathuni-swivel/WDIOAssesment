@@ -1,1 +1,1 @@
-#read
+#run this test with proper internet connection

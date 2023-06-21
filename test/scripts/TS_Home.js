@@ -2,6 +2,8 @@ import LIB_common from "../components/LIB_common.js";
 import LIB_Home from "../components/LIB_home.js";
 import LIB_propertyrateResults from "../components/LIB_propertyrateResults.js";
 import LIB_searchResult from "../components/LIB_searchResults.js";
+import browserManager from "../../infrastructure/browserManager.js";
+import configjs from "../../configjs.json";
 import dataTC01 from "../data/dt_common/dt_TC01.json";
 import dataTC02 from "../data/dt_home/dt_TC02.json"
 
@@ -11,7 +13,9 @@ describe("Booking.com Test Suite", () => {
 it("TC1 verify user can select currency type and language and TC2 verify user can add location details", async () => {
 
   //navigate to website
-await LIB_common.bc_NavigateToURL();
+
+await browserManager.navigateToUrl(configjs.DefaultURL);
+await browserManager.maximizeWindow();
 
 //Click on Language icon on top panel (Set it to English (UK))
 await LIB_common.bc_SelectLanguage(dataTC01.language);

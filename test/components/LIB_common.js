@@ -1,15 +1,16 @@
 
 
-import configjs from "../../configjs.json";
+
 import PGcommon from "../pages/PG_Booking_Common"
 
 class common{
 
-    async bc_NavigateToURL() {
+    // async bc_NavigateToURL() {
     
-     browser.url(configjs.DefaultURL);
-     browser.pause(2000);
-    }
+    //  browser.url(configjs.DefaultURL);
+    //  browser.pause(2000);
+    //  await browser.maximizeWindow();
+    // }
 
 
     async bc_SelectLanguage(prm_language){

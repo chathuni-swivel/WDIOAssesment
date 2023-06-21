@@ -17,7 +17,7 @@ class propertyresults{
 
    async bc_getNameandAmount(){
 
-    //await PGPropertyRate.ele_secondcardTitle.waitForDisplayed({timeout:100000});
+   await PGPropertyRate.ele_secondcardTitle.waitForDisplayed({timeout:100000});
      title = await PGPropertyRate.ele_secondcardTitle.getText();
     const amount = await PGPropertyRate.ele_secondcardPrice.getText();
     const taxes =await PGPropertyRate.ele_secondcardtaxes.getText();
