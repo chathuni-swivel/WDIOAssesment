@@ -1,17 +1,7 @@
 
-
-
 import PGcommon from "../pages/PG_Booking_Common"
 
 class common{
-
-    // async bc_NavigateToURL() {
-    
-    //  browser.url(configjs.DefaultURL);
-    //  browser.pause(2000);
-    //  await browser.maximizeWindow();
-    // }
-
 
     async bc_SelectLanguage(prm_language){
         expect(PGcommon.btn_languagetype).toBePresent()
