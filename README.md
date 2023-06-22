@@ -1,7 +1,7 @@
 #run this tests with proper internet connection
 
 #to run file use command - npm run wdio
-#to view report run command - npn run report
+#to view report run command - npm run report
 
 #challenges
 it was challenge to set check in and check out date - was able to found a solution by installing moment( npm install moment)
