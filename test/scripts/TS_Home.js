@@ -36,8 +36,14 @@ await LIB_Home.bc_entercheckInOutdate(dataTC02.DaysForcheckout);
 //Select 1 adults and 0 children and 1 room and verify it.
 await LIB_Home.bc_Addocupancy();
 
+//verify 1 adults and 0 children and 1
+await LIB_Home.bc_verifyOcupancybtn(dataTC02.occupancy);
+
 //Click on the Search button.
 await LIB_Home.bc_search();
+
+/*startof 2nd testcase
+*/
 
 //Verify the Search Location is correct
 
@@ -53,6 +59,8 @@ await LIB_propertyrateResults.bc_clickOnSortbtn();
 //Get the name and amount with the tax of the second item from the search List page
 
  await LIB_propertyrateResults.bc_getNameandAmount();
+
+ //Click the second item from the search List page and navigate to the hotel Detail page and verify the hotel name.
 
  await LIB_propertyrateResults.bc_NavigateToHotelDetailedPage();
 

@@ -1,7 +1,7 @@
 
 import PGhome from "../pages/PG_Booking_Home";
 import datamanager from "../../infrastructure/datamanager";
-
+import { expect } from "chai";
 
 
 class home{
@@ -32,11 +32,19 @@ browser.pause(20000);
 }
 
 async bc_Addocupancy(){
+    //click on occupancy config bbutton
 await PGhome.dd_ocupancy.click();
 await PGhome.btn_Adultsminus.click();
 await PGhome.btn_done.click();
 
 }
+
+async bc_verifyOcupancybtn(prm_occupancy){
+const occupancy_count=await PGhome.dd_ocupancy.getText();
+expect(occupancy_count).to.equal(prm_occupancy);
+}
+
+
 
 async bc_search(){
 

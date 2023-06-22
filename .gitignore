@@ -1,3 +1,10 @@
 node_modules/
 package-lock.json
+allure-report/
+allure-log.logs
+reports/
+logs/allure-log.log
+*.log
+logs/allure-log.log
+logs/allure-log.log
 
