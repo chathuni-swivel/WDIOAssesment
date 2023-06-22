@@ -1,7 +1,7 @@
 class PGSearchResultPage{
 
     ele_Title(idf_location){
-       // return $('//h1[@aria-live="assertive"]')
+    
        return $(`//h1[contains(text(),"${idf_location}")]`)
     }
 
