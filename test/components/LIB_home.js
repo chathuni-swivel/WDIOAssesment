@@ -15,7 +15,7 @@ browser.pause(2000);
 
   
 
-async bc_entercheckInOutdate(prm_checkoutdate){
+async bc_entercheckInOutdate(prm_daysforcheckout){
     
 await PGhome.btn_checkIn.click();
  browser.pause(50000);    
@@ -23,7 +23,7 @@ const currentDate =datamanager.getCurrentDate();
 const formattedcurrentDate = currentDate.format("YYYY-MM-DD");
 await PGhome.dtp_checkin(formattedcurrentDate).click();
 browser.pause(50000);  
-const checkoutDate = currentDate.add(prm_checkoutdate, "days");
+const checkoutDate = currentDate.add(prm_daysforcheckout, "days");
 const formattedDate = checkoutDate.format("YYYY-MM-DD");
 await PGhome.dtp_checkout(formattedDate).click();
 browser.pause(20000);  

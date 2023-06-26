@@ -1,16 +1,19 @@
 import LIB_common from "../components/LIB_common.js";
 import LIB_Home from "../components/LIB_home.js";
 import LIB_propertyrateResults from "../components/LIB_propertyrateResults.js";
+import LIB_BookingDetail from "../components/LIB_BookingDetails.js";
 import LIB_searchResult from "../components/LIB_searchResults.js";
+import LIB_FinalSteps from "../components/LIB_Finalbookingstep.js";
 import browserManager from "../../infrastructure/browserManager.js";
 import configjs from "../../configjs.json";
 import dataTC01 from "../data/dt_common/dt_TC01.json";
-import dataTC02 from "../data/dt_home/dt_TC02.json"
+import dataTC02 from "../data/dt_home/dt_TC02.json";
+import dataTC04 from "../data/dt_home/dt_TC04.json";
 
 
 describe("Booking.com Test Suite", () => {
 
-it("TC1 verify user can select currency type and language and TC2 verify user can add location details", async () => {
+it("TC_01 verify user can select currency type and language and TC_02 verify user can add location details and TC_03 reserve room", async () => {
 
   //navigate to website
 
@@ -60,15 +63,46 @@ await LIB_propertyrateResults.bc_clickOnSortbtn();
 
  await LIB_propertyrateResults.bc_getNameandAmount();
 
+
  //Click the second item from the search List page and navigate to the hotel Detail page and verify the hotel name.
 
  await LIB_propertyrateResults.bc_NavigateToHotelDetailedPage();
+
+  
+ /*start of 3rd testcase
+ */
 
 //Select the room against the amount and tax that you store in previous page
 await LIB_propertyrateResults.bc_verifyHotelPriceAndTax();
 
 
 });
+
+it("TC_04 Enter booking details",async() =>{
+
+
+//Verify the checkout date, check in date and amount.
+
+await LIB_BookingDetail.bc_VerifyCheckInCheckOutDate(dataTC02.DaysForcheckout);
+
+
+// Fill all the mandatory fields in your details. First name, Last name, Email
+
+await LIB_BookingDetail.bc_EnterBookingDetails(dataTC04.firstname,dataTC04.lastname,dataTC04.email);
+
+//Verify your entered details are matched in final screen
+
+await LIB_FinalSteps.bc_verifyfinalscreendetails(dataTC04.firstname,dataTC04.email);
+
+//go to home page
+
+await LIB_FinalSteps.bc_NavigateToHome();
+
+// Remove the checkout hotel and verify it is not present.
+
+await LIB_FinalSteps.bc_CloseNoticeAlert();
+
+})
 
 
 

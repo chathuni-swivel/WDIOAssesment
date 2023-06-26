@@ -23,6 +23,10 @@ get btn_signinAlert(){
     return $('//button[@aria-label="Dismiss sign-in info."]')
 }
 
+get ele_siteLogo(){
+    return $('//div[@class="bui-header__logo"]')
+}
+
 
 }
 export default new PGCommonPage();

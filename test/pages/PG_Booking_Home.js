@@ -47,5 +47,13 @@ get ele_roomcount(){
 get btn_done(){
     return $('//span[text()="Done"]')
 }
+
+get btn_closeNotice(){
+    return $('//div[@class="notice-item-close-x"]');
+}
+
+get ele_noticeAlert(){
+    return $('//div[@id="growl_squash"]');
+}
 }
 export default new PGHomePage();
