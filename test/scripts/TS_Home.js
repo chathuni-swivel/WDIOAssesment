@@ -64,6 +64,10 @@ await LIB_propertyrateResults.bc_clickOnSortbtn();
 
  await LIB_propertyrateResults.bc_NavigateToHotelDetailedPage();
 
+//Select the room against the amount and tax that you store in previous page
+await LIB_propertyrateResults.bc_verifyHotelPriceAndTax();
+
+
 });
 
 

@@ -1,24 +1,33 @@
 class PGpropertyResultPage{
 
 get btn_sortby(){
-   // return $('//span[text()="Sort by:"]')
+   //return $('//button[@data-selected-sorter="price"]')
    return $('//button[@data-testid="sorters-dropdown-trigger"]')
+
 }
 
 get dd_lowestprice(){
     return $('//span[text()="Price (lowest first)"]')
 }
 
+get btn_sortbylowest(){
+    return $('//button[@data-selected-sorter="price"]')
+}
+
 get ele_secondcardTitle(){
-    return $ ('(//div[@data-testid="title"])[2]')
+    //return $ ('(//div[@data-testid="title"])[2]')
+    return $ ('(//button[@data-selected-sorter="price"]/following::div[@data-testid="title"])[2]')
 }
 
 get ele_secondcardPrice(){
-    return $ ('(//span[@data-testid="price-and-discounted-price"])[2]')
+    //return $ ('(//span[@data-testid="price-and-discounted-price"])[2]')
+    return $ ('(//button[@data-selected-sorter="price"]/following::span[@data-testid="price-and-discounted-price"])[2]')
 }
 
 get ele_secondcardtaxes(){
-    return $('(//div[@data-testid="taxes-and-charges"])[2]')
+   // return $('(//div[@data-testid="taxes-and-charges"])[2]')
+   return $('(//button[@data-selected-sorter="price"]/following::div[@data-testid="taxes-and-charges"])[2]')
+
 }
 
 get ele_secondcard(){
