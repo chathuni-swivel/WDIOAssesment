@@ -1,7 +1,7 @@
 class PGpropertyResultPage{
 
 get btn_sortby(){
-   //return $('//button[@data-selected-sorter="price"]')
+ 
    return $('//button[@data-testid="sorters-dropdown-trigger"]')
 
 }
@@ -15,17 +15,17 @@ get btn_sortbylowest(){
 }
 
 get ele_secondcardTitle(){
-    //return $ ('(//div[@data-testid="title"])[2]')
+    
     return $ ('(//button[@data-selected-sorter="price"]/following::div[@data-testid="title"])[2]')
 }
 
 get ele_secondcardPrice(){
-    //return $ ('(//span[@data-testid="price-and-discounted-price"])[2]')
+   
     return $ ('(//button[@data-selected-sorter="price"]/following::span[@data-testid="price-and-discounted-price"])[2]')
 }
 
 get ele_secondcardtaxes(){
-   // return $('(//div[@data-testid="taxes-and-charges"])[2]')
+
    return $('(//button[@data-selected-sorter="price"]/following::div[@data-testid="taxes-and-charges"])[2]')
 
 }

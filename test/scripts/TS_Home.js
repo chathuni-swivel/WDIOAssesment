@@ -53,7 +53,7 @@ await LIB_Home.bc_search();
 await LIB_searchResult.bc_VerifySearchedLocation(dataTC02.location);
 
 //Select the Property rating
-//await LIB_searchResult.bc_AddpropertyRate();
+await LIB_searchResult.bc_AddpropertyRate();
 
 //Select the sort by Price in top panel in search result.
 

@@ -21,7 +21,7 @@ class propertyresults{
 
    await PGPropertyRate.btn_sortbylowest.waitForDisplayed({timeout:200000});
     title = await PGPropertyRate.ele_secondcardTitle.getText();
-    amount = await PGPropertyRate.ele_secondcardPrice.getText();
+      amount = await PGPropertyRate.ele_secondcardPrice.getText();
     taxes =await PGPropertyRate.ele_secondcardtaxes.getText();
     browser.pause(50000); 
       

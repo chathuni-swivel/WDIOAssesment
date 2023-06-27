@@ -2,7 +2,7 @@ import { expect } from "chai";
 import PGBookingDetail from "../pages/PG_Booking_Details";
 
 import datamanager from "../../infrastructure/datamanager";
-//const { DateTime } = require('luxon');
+
 
 
 class BookingDetails{

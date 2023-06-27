@@ -7,7 +7,7 @@ class PGSearchResultPage{
 
     get ele_propertyrate(){
         return $('//div[@id="filter_group_class_:R14q:"]/div[@data-filters-item="class:class=5"]/input')
-       // return $('//div[@data-testid="filters-group-label-content"]//div[contains(text(),"5 stars")]')
+
       
     }
 
